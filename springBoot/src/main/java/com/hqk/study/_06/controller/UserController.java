@@ -24,4 +24,13 @@ public class UserController {
 			System.out.println(basicUser.toString());
 		}
 	}
+	
+	@RequestMapping("/insertUser")
+	@ResponseBody
+	public void insertUser() {
+		BasicUser user  = new BasicUser();
+		user.setPassword("123456");
+		user.setUserName("test");
+		basicUserService.insertUser(user);
+	}
 }

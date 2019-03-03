@@ -6,9 +6,8 @@ import com.hqk.study._06.model.BasicUser;
 
 public interface BasicUserService {	
     
-    public void deleteIds(String ids);
-    
     public List<BasicUser> selectList();
-   
+
+    public void insertUser(BasicUser user);
 }
 
