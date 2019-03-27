@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+  
+    <!--配置应用信息 -->
+    <dubbo:application name="democlient"/>
+    <!--配置注册中心-->
+    <dubbo:registry address="N/A"/>
+    <!--发布服务  reference引用-->
+    <dubbo:reference interface="com.hqk.dubbo.demo_api.service.UserService" id="userService" 
+    url="dubbo://192.168.62.1:20880/com.hqk.dubbo.demo_api.service.UserService"/>
+</beans>
